@@ -1,0 +1,201 @@
+:root {
+    --main-color: #d3ad7f; 
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    --color: #fff;
+    font-size: 10px;
+}
+
+* {
+    margin: 0;                             /* remove default margin */
+    padding: 0;                            /* remove default padding */
+    outline: none;                         /* remove default outline */
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear; 
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: var(--bg);                 /* cor de fundo do body */
+}
+
+section {
+    padding: 3rem 2rem;                   /* espaçamento interno do section */
+    margin: 0 auto;                       /* centraliza o section horizontalmente */
+    max-width: 1200px;                    /* largura máxima do section */
+}
+
+.header {
+    position: fixed;                      /* fixa o header no topo da página */
+    top: 0;                               /* posiciona o header no topo da página */
+    left: 0;                              /* posiciona o header no início da página */
+    right: 0;                             /* posiciona o header no final da página */
+    z-index: 99;                          /* garante que o header fique acima de outros elementos */
+    border-bottom: var(--border);         /* adiciona uma borda inferior ao header */
+    background: var(--bg);                /* cor de fundo do header */
+    
+}
+
+.header section {
+    display: flex;                        /*o layout fica flexivel, os itens se ajustam ao tamanho do container*/
+    align-items: center;                  /*alinha os itens verticamente ao centro*/
+    justify-content: space-between;       /*distribui os itens com espaço entre eles, o primeiro item fica no início e o último no final*/
+    padding-top: 1.5rem;                  /* espaçamento interno superior do header */
+    padding-bottom: 1.5rem;               /* espaçamento interno inferior do header */
+}  
+
+.navegacao a {
+    margin: 0 1rem;                        /* espaçamento externo da navegação */
+    font-size: 1.8rem;                     /* tamanho da fonte da navegação */
+    color: var(--color);                      /* cor da fonte da navegação */
+}
+.navegacao a:hover {
+    color: var(--main-color);              /* cor da fonte da navegação ao passar o mouse */
+    border-bottom: 0.1rem solid var(--main-color); /* adiciona uma borda inferior à navegação ao passar o mouse */
+    padding-bottom: 0.5rem;               /* espaçamento interno inferior da navegação ao passar o mouse */
+    font-size: 2.0rem;                     /* aumenta o tamanho da fonte da navegação ao passar o mouse */  
+
+}
+
+.icones img {
+    margin: 1rem;                 /* espaçamento externo dos ícones */
+    cursor: pointer;        /* muda o cursor para indicar que os ícones são clicáveis */
+}
+
+.icones img:hover {
+    transform: scale(1.2);     /* aumenta o tamanho dos ícones ao passar o mouse */ /*salvou*/
+
+}
+    
+.home-container {
+    background: url("img/home-img.jpg");
+    background-position: center; /* centraliza a imagem de fundo */
+    background-size: cover;     /* ajusta a imagem de fundo para cobrir toda a área */
+   
+}
+
+.home-container section {
+    display: flex;            /* o layout fica flexível, os itens se ajustam ao tamanho do container */
+    align-items: center;      /* alinha os itens verticalmente ao centro */
+    min-height:  100vh;              /* altura da home igual à altura da janela de visualização */
+}
+
+.content {
+    max-width: 60rem;           /* largura máxima do conteúdo */
+           
+}
+
+.content h3 {
+    font-size: 6rem;            /* tamanho da fonte do título */
+    color: var(--color);        /* cor da fonte do título */
+
+}
+
+.content p {
+    font-size: 1.7rem;           /* tamanho da fonte do parágrafo */
+    color: var(--color);         /* cor da fonte do parágrafo */
+    margin-top: 1rem;            /* espaçamento externo superior do parágrafo */
+    font-weight: 100;            /* peso da fonte do parágrafo */
+    line-height: 1.8;            /* altura da linha do parágrafo */
+    padding: 1rem 0;             /* espaçamento interno vertical do parágrafo */
+}
+
+.btn {
+    background: var(--main-color);/* cor de fundo do botão */
+    color: var(--color);          /* cor da fonte do botão */
+    padding: 1rem 3rem;           /* espaçamento interno do botão */
+    font-size: 1.7rem;            /* tamanho da fonte do botão */
+    cursor: pointer;              /* muda o cursor para indicar que o botão é clicável */
+    margin-top: 1rem;             /* espaçamento externo superior do botão */
+    display: inline-block;        /* exibe o botão como um elemento em linha */
+}
+
+.btn:hover {
+    letter-spacing: 0.1rem;        /* aumenta o espaçamento entre as letras do botão ao passar o mouse */
+}
+.title {
+    font-size: 4rem;               /* tamanho da fonte do título */
+    color: var(--color);           /* cor da fonte do título */
+    text-align: center;            /* alinha o texto do título ao centro */
+    text-transform: uppercase;     /* transforma o texto do título para maiúsculas */
+    margin-bottom: 4rem;            /* espaçamento externo inferior do título */
+}
+
+.title span {
+    color: var(--main-color);     /* cor da fonte do título destacado */
+    text-transform: uppercase;    /* transforma o texto do título para maiúsculas */
+}
+ 
+.sobre .row {
+    display: flex;               /* o layout fica flexível, os itens se ajustam ao tamanho do container */
+    align-items: center;         /* alinha os itens verticalmente ao centro */
+    background-color: var(--black); /* cor de fundo da seção sobre */
+    gap: 1.5rem;                 /* espaçamento entre os itens da seção sobre */
+}
+
+.sobre .row .content {
+    flex: 1;                     /* o conteúdo ocupa todo o espaço disponível */
+    padding: 2rem;               /* espaçamento interno do conteúdo */
+}
+
+.sobre .row .content h3 {
+    font-size: 3rem;        /* tamanho da fonte do título da seção sobre */
+    color: #fff;              /* cor da fonte do título da seção sobre */
+}
+
+.sobre .row .content p {
+   font-size: 1.6rem;        /* tamanho da fonte do parágrafo da seção sobre */
+   color: #fff;              /* cor da fonte do parágrafo da seção sobre */
+   padding: 1rem 0;         /* espaçamento interno vertical do parágrafo da seção sobre */
+   line-height: 1.8;        /* altura da linha do parágrafo da seção sobre */
+}
+
+
+.menu .box-container {
+    display: grid;             /* o layout fica em grade, os itens se organizam em linhas e colunas */
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));    /* define o número de colunas da grade, ajustando-se automaticamente ao tamanho do container */
+    gap: 1.5rem;             /* espaçamento entre os itens da grade */
+}
+
+.menu .box-container .box {
+    text-align: center;       /* alinha o texto do item do menu ao centro */
+    border: var(--border);     /* adiciona uma borda ao item do menu */
+    padding: 5rem;           /* espaçamento interno do item do menu */
+    cursor: pointer;    /* muda o cursor para indicar que o item do menu é clicável */
+}
+
+
+.menu .box-container .box img {
+    height: 10rem;           /* altura da imagem do item do menu */
+}
+
+.menu .box-container .box h3 {
+    color: #fff;          /* cor da fonte do título do item do menu   */
+    font-size: 2rem;        /* tamanho da fonte do título do item do menu */
+    margin: 1rem 0;         /* espaçamento externo vertical do título do item do menu */
+}
+
+.menu .box-container .box .price {
+    color: #fff;          /* cor da fonte do parágrafo do item do menu */
+    font-size: 2.5rem;        /* tamanho da fonte do parágrafo do item do menu */
+    padding: 0.5rem 0;       /* espaçamento interno vertical do parágrafo do item do menu */
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;        /* tamanho da fonte do parágrafo do item do menu destacado */
+    text-decoration: line-through; /* adiciona uma linha de corte ao parágrafo do item do menu destacado */
+    font-weight: 100;            /* peso da fonte do parágrafo do item do menu destacado */ 
+
+}
+
+.menu .box-container .box:hover {
+    background-color: #fff;   /* cor de fundo do item do menu ao passar o mouse */
+
+}
+
+.menu .box-container .box:hover>* {
+    color: var(--black);     /* cor da fonte do item do menu ao passar o mouse */
+}

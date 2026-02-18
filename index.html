@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Cafena</title>
+</head>
+
+<body>
+
+    <!-- Menu Superior-->
+    <header class="header">
+        <section>
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="logo da cafeteria">
+            </a>
+
+            <!-- Menu de Navegação-->
+            <nav class="navegacao">
+                <a href="#home">Home</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#menu">Menu</a>
+                <a href="#avaliacao">Avaliações</a>
+                <a href="#endereco">Endereço</a>
+            </nav>
+
+            <div class="icones">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC9klEQVR4nO2Zy04UQRSGm4W4dSMYLgv0EVyAN17BRMFwMSHiA5igRmICugNewMSVsjAhExcqxrWCG29v4MatuMKIAvPPZ6r7MNNMCNLMmRlmnJNU0pnp/v/zV9WpOnUqilrWsqNnwClgEmkR6QvSD6Qta2tIn+P/4AbQGR01AwaRlpG2KRQ4UAvvSq+AS0dBwBmkNynn8kjvgCmgH+gAjlkLzwPAbaSV+N3Sd6+B0/USMY700xz5hTQHnMzwfQfSPNKGYawDo9X1usyA2VRvLgHd0SEN6EHKFfFg5rBYmQzpoQkoxM/Q5oILt5BUEzGE6ZSIEDBUBfzhlJgRb/x0YCcxAfeqQpLwTKdips+fYGd1kpbcwdM80FaMGWnZG3zQgDeAXlfwvfm645WwEI/+RT/gsNklQubcQP/NOW+cL/3SjmQXzmfZJxx4wz4TNtit8OwBeNN65q2Lh1m4pVWbXhMeYIsGNuXiXRZuuGOd+KRysJDFJkL6XbzLwg3nTcjHysFCKp4IqVl8FLmh04R8rxxM2jQh7S7eZeGG4ybkT7MIWW+WqfXVM9gHXLzLwg0XTMhqsyy/jz3AJg1sxcW7LNzSe+vEKz7ztJSiVJ4qZE9RtoETPqCh2pGMyrwL4ME4F4wz5wcK5wz0dx3S+LO+4KVUPud1Tt/nYPXcuF5Ug6AvPn4mvTTtTlDiuW8i1oCuapGMpooPw1XAv5YqPlz2xi8nm0mJmfaYZvF0CiOxIyLBHvfx+CBiSjHTUwFWbzEmdteGw3I/5uv53g6MFGMmFCXCGTvDPmP7xEK8Eu6Uf9L14JKY0eoqKS0Ay2VF7JU4tQiHorCZQru1TvvtbnyE3V3EDmXXrjACdRMTLJRsQrUj47XCJtKz8mR0HzEjUa3Mrg4mkJ4ifbLLnU2r1n9D+oD0KJ6W+xwL4tWx3mKc68Dbe4i5HjWRmPGo0YwmEzP0P4gZixpUzFZLTEMsADAbNaIBV4sjk88/iBrZCNOsVtfZLWtZFNtfh3O+ZswyRVYAAAAASUVORK5CYII="
+                    alt="search--v1" width="32px">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC00lEQVR4nO2ZO2sVURSFT1RQRLTVPBAf0fgAkWDjH1AR0cpOiCFGIyISEOysBBsbESwsNBhNJIhIFCuLaClWNgqCkPgKGDQIFjErn8zMvsnV5D6S7LmZARec5t7Za+115uwz+8yE8B8ZA3AY6SNTU5Qc0nekF0AbUBeyCKRPZU3MNtWbSTNII0VJDs/6H+qAeuAU0s/4OjgRsgbgUGxGGgYOVri20wy/DnkGsBLpm92VHSHPIKqRxEhXyDOIaiVZXv0hzwC2mZHRTO5eC9qyoSXkGUj3zciZkGcAp2159YU8A2gxI1/+10lWgNQ/rx4tjSG9XLwR6MqAkfceRnYW6mTRZPPVlu7E2pOTlxdPFnXF0lerk+0uGVYBYE3chUuR8GYfUmnAjHS6EFYBoN1WwvPgBeCckd5zI62AqMDdz0TAbjPy2Y20DIDmeElJ48Dq4AWrk1GboWY34hJAumITdyt4A+mhGelwJy8CsCw+xSZa+4M3gPM2S3fdyYsAHDCdd6m0RcAeExhxJ5+rk4BLIQ1YnRTO8VtS0liH9AtJQFMaGomQ9MiMtKfCD2ftrj9Lg79Y6IIJ9aTCL72yiTqeBv+MEOwt9YLPgXuXcY8Bq7z559oax2zWNrlyS9fMyA1P3nKCj81ImxsnrIhPoQlvqxdvJdFum7nbjpxHjfONF2c1oq0m+iGF3bDbi7OyKCyPv6P4nwJ/A+trZiQ2Iw06m5hCul5TE7ERuGgJ3Ax5BrDPjLwNeQbJdjluBVof8gxmnicnQ54BdNjyGgp5BrB2ul2RrgIbo6055BHAMaQJx214aCnNHHE0MgFsWBojUo8lMQg0xEN6Uu67ClJfmZje2rtIkip0rQ3Tv0FT4WxRImasTMyPWuX+b1KF50ljtUmxgJjUMf2+K1oa0BgP6an9NuAVU5vP2IW3K38XbnRk3eoVE2oBK9YH8ZJJxkClhBYSEwX+AY2wjveOFMo8AAAAAElFTkSuQmCC"
+                    alt="shopping-cart--v1" width="32px">
+            </div>
+
+        </section>
+    </header>
+
+    <div class="home-container">
+
+        <section id="home">
+            <div class="content">
+                <h3>O MELHOR CAFÉ DA CIDADE</h3>
+                <p>
+                    O Brasil, líder mundial na produção e exportação de café,
+                    enfrenta uma alta histórica nos preços ao consumidor devido a
+                    fatores climáticos que afetaram as lavouras, elevando os custos da
+                    cesta básica nos últimos anos. Apesar disso, o consumo continua alto,
+                    com destaque para grãos Arábica e Robustas, e o mercado busca inovações
+                    em qualidade
+                </p>
+                <a href="#" class="btn">Pegue o seu Agora!</a>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="sobre" id="sobre">
+        <h2 class="title">Sobre <span>Nós</span></h2>
+        <div class="row">
+            <div class="container-image">
+                <img src="img/about-img.jpg" alt="sobre-nos">
+            </div>
+
+            <div class="content">
+                <h3>Oque a Cafena oferece?</h3>
+                <p>
+                    A Cafena é uma cafeteria que se dedica a oferecer aos seus clientes a melhor experiência em café.
+                    Com uma equipe apaixonada por café, selecionamos cuidadosamente os grãos para garantir a qualidade e
+                    o sabor excepcionais em cada xícara.
+                    Nossa missão é proporcionar momentos de prazer e conexão através do café, criando um ambiente
+                    acolhedor onde os amantes de café possam desfrutar de suas bebidas favoritas.
+                </p>
+                <a href="#" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        
+        <h2 class="title">Nosso <span>Menu</span></h2>
+        
+        <div class="box-container">
+            <div class="box">
+                <img src="img/menu-1.png" alt="item-1">
+                <h3>Café coado</h3>
+                <div class="price">R$ 15,99 <span>R$ 20,99</span></div>
+                <a href="#" class="btn">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="img/menu-2.png" alt="item-2">
+                <h3>Café coado</h3>
+                <div class="price">R$ 15,99 <span>R$ 20,99</span></div>
+                <a href="#" class="btn">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="img/menu-3.png" alt="item-3">
+                <h3>Café coado</h3>
+                <div class="price">R$ 15,99 <span>R$ 20,99</span></div>
+                <a href="#" class="btn">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="img/menu-4.png" alt="item-4">
+                <h3>Café coado</h3>
+                <div class="price">R$ 15,99 <span>R$ 20,99</span></div>
+                <a href="#" class="btn">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="img/menu-5.png" alt="item-5">
+                <h3>Café coado</h3>
+                <div class="price">R$ 15,99 <span>R$ 20,99</span></div>
+                <a href="#" class="btn">Adicionar ao Carrinho</a>
+            </div>
+
+            <div class="box">
+                <img src="img/menu-6.png" alt="item-6">
+                <h3>Café coado</h3>
+                <div class="price">R$ 15,99 <span>R$ 20,99</span></div>
+                <a href="#" class="btn">Adicionar ao Carrinho</a>
+            </div>
+        </div>
+
+    </section>
+
+    
+</body>
+
+</html>

@@ -199,3 +199,16 @@ section {
 .menu .box-container .box:hover>* {
     color: var(--black);     /* cor da fonte do item do menu ao passar o mouse */
 }
+
+.home-container2 {
+    background: url("img/cafe-coado-topo.jpg");
+    background-position: center; /* centraliza a imagem de fundo */
+    background-size: cover;     /* ajusta a imagem de fundo para cobrir toda a área */
+}
+
+.home-container2 h3 {
+    margin-top: 95px;
+    align-items: center;
+    
+    
+}
